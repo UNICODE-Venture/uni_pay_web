@@ -1,5 +1,5 @@
 name: uni_pay_web
-description: A starting point for Dart libraries or applications.
+description: A library for making online payment by using Moyasar.
 version: 1.0.0
 repository: https://github.com/UNICODE-Venture/uni_pay_web
 
