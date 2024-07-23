@@ -1,18 +1,18 @@
-# Payment Gateway Library by **UNICODE Team**
+# Payment Gateway Library Crafted by the **[UNICODE Team](https://www.unicodesolutions.co/).**
 
-A library for making online payment by using Moyasar
+A lightweight library for processing online payments and generating invoices with Moyasar, providing seamless payment info retrieval as well (🇸🇦💙🇧🇩❤️🇪🇬).
 
 # **Features support**
 
-- **Card support (mada, visa, mastercard) - [Docs](https://moyasar.com/docs/api/#api-keys)**
+- **Card support (mada, visa, mastercard, amex) - [Docs](https://moyasar.com/docs/api/#api-keys)**
 - **Apple Pay - [Integration](https://help.moyasar.com/en/article/moyasar-dashboard-apple-pay-certificate-activation-9l6sd5/) and [Xcode setup](https://help.apple.com/xcode/mac/9.3/#/deva43983eb7?sub=dev44ce8ef13)**
-- **Tamara - [Docs](https://docs.tamara.co/introduction/)**
+- **stcpay - [Docs](https://docs.moyasar.com/stc-pay)**
 
 # **Current supported methods**
 
-- **CreateInvoice**
+- `CreateInvoice`
   you can create Invoice by passing [amount , currency , description, expiredAt , successUrl ,backUrl ,metadata]
-- **GetPayment**
+- `GetPayment`
   you can get payment details with [id]
 
 ## Getting started
@@ -43,7 +43,10 @@ final createInvoiceRes = UniPayWeb.createInvoice(
     expiredAt: 'expiredAt',
     successUrl: 'successUrl',
     backUrl: 'backUrl',
-    metadata: {},
+    metadata: {
+        'product_name': "your-product-name",
+        'product_id': "abc123",
+    },
   ),
 );
 
@@ -55,14 +58,4 @@ final getPaymentRes = UniPayWeb.getPayment(
 
 ```
 
-## Contributing
-
-Contributions are welcome! If you would like to contribute, please fork the repository and submit a pull request.
-
-## License
-
-UniShipping is available under the [MIT license](LICENSE). See the LICENSE file for more info.
-
-```
-
-```
+#### If you enjoyed it, then give it a star ⭐️ and like 👍🏻 and for more arts & crafts 🎨 from our team kindly visit here [Team UNICODE](https://pub.dev/publishers/unicodesolutions.co/packages). Until next time, keep coding and stay awesome 😉

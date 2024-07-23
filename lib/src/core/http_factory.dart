@@ -22,7 +22,9 @@ class HttpFactory {
     Map<String, String>? params,
   }) async {
     String url = '${Apis.moyasarUrl}$endPoint';
-    Uri uri = params != null ? Uri.parse(url).replace(queryParameters: params) : Uri.parse(url);
+    Uri uri = params != null
+        ? Uri.parse(url).replace(queryParameters: params)
+        : Uri.parse(url);
     _logRequest('GET', url, params, headers);
     final response = await client.get(uri, headers: headers);
     _logResponse(response);
@@ -37,7 +39,9 @@ class HttpFactory {
     Map<String, dynamic>? body,
   }) async {
     String url = '${Apis.moyasarUrl}$endPoint';
-    Uri uri = params != null ? Uri.parse(url).replace(queryParameters: params) : Uri.parse(url);
+    Uri uri = params != null
+        ? Uri.parse(url).replace(queryParameters: params)
+        : Uri.parse(url);
     _logRequest('POST', url, headers, params, body);
     final response = await client.post(uri, headers: headers, body: body);
     _logResponse(response);
@@ -52,7 +56,9 @@ class HttpFactory {
     Map<String, dynamic>? body,
   }) async {
     String url = '${Apis.moyasarUrl}$endPoint';
-    Uri uri = params != null ? Uri.parse(url).replace(queryParameters: params) : Uri.parse(url);
+    Uri uri = params != null
+        ? Uri.parse(url).replace(queryParameters: params)
+        : Uri.parse(url);
     _logRequest('PUT', url, headers, params, body);
     final response = await client.put(uri, headers: headers, body: body);
     _logResponse(response);
@@ -66,7 +72,9 @@ class HttpFactory {
     Map<String, String>? params,
   }) async {
     String url = '${Apis.moyasarUrl}$endPoint';
-    Uri uri = params != null ? Uri.parse(url).replace(queryParameters: params) : Uri.parse(url);
+    Uri uri = params != null
+        ? Uri.parse(url).replace(queryParameters: params)
+        : Uri.parse(url);
     _logRequest('DELETE', url, headers, params);
     final response = await client.delete(uri, headers: headers);
     _logResponse(response);

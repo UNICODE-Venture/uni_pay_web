@@ -1,27 +1,65 @@
-
-
 class PaymentModel {
+  /// [transactionId] is the unique identifier of the payment transaction.
   late String transactionId;
+
+  /// [status] is the status of the payment transaction.
   late String status;
+
+  /// [amount] is the amount of the payment transaction.
   late int amount;
+
+  /// [fee] is the fee associated with the payment transaction.
   late int fee;
+
+  /// [currency] is the currency used for the payment transaction.
   late String currency;
+
+  /// [refunded] is the amount refunded for the payment transaction.
   late int refunded;
+
+  /// [refundedAt] is the date and time when the payment transaction was refunded.
   late String refundedAt;
+
+  /// [captured] is the amount captured for the payment transaction.
   late int captured;
+
+  /// [capturedAt] is the date and time when the payment transaction was captured.
   late String capturedAt;
+
+  /// [voidedAt] is the date and time when the payment transaction was voided.
   late String voidedAt;
+
+  /// [description] is the description of the payment transaction.
   late String description;
+
+  /// [amountFormat] is the formatted amount of the payment transaction.
   late String amountFormat;
+
+  /// [feeFormat] is the formatted fee associated with the payment transaction.
   late String feeFormat;
+
+  /// [refundedFormat] is the formatted amount refunded for the payment transaction.
   late String refundedFormat;
+
+  /// [capturedFormat] is the formatted amount captured for the payment transaction.
   late String capturedFormat;
+
+  /// [invoiceId] is the unique identifier of the invoice associated with the payment transaction.
   late String invoiceId;
+
+  /// [ip] is the IP address of the device used for the payment transaction.
   late String ip;
+
+  /// [callbackUrl] is the URL to which the payment transaction callback should be sent.
   late String callbackUrl;
+
+  /// [createdAt] is the date and time when the payment transaction was created.
   late String createdAt;
+
+  /// [updatedAt] is the date and time when the payment transaction was last updated.
   late String updatedAt;
 
+  /// [PaymentModel] is the constructor of the class of the payment transaction.
   PaymentModel({
     required this.transactionId,
     this.status = '',
@@ -45,6 +83,7 @@ class PaymentModel {
     this.updatedAt = '',
   });
 
+  /// [PaymentModel.fromJson] is a method that converts a JSON object into a PaymentModel object.
   PaymentModel.fromJson(Map<String, dynamic> json) {
     transactionId = json['id'];
     status = json['status'] ?? '';

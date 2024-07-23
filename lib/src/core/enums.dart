@@ -25,9 +25,12 @@ enum PaymentStatus {
 }
 
 enum UniPayCurrency {
+  /// [sar] is the currency for Saudi Riyal.
   sar,
+
+  /// [usd] is the currency for United States Dollar.
   usd,
+
+  /// [omr] is the currency for Omani Riyal.
   omr;
-
-
 }
