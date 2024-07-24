@@ -10,9 +10,9 @@ class InvoicesMethods {
   /// Create Invoice ---------------------
   Future<UniInvoiceModel> createInvoice({
     required UniInvoiceDTO dto,
-    required String psk,
+    required String sk,
   }) async {
-    String basicAuth = 'Basic ${base64.encode(utf8.encode('$psk:'))}';
+    String basicAuth = 'Basic ${base64.encode(utf8.encode('$sk:'))}';
     final response = await httpFactory.post(
       Apis.invoices,
       body: dto.toJson(),

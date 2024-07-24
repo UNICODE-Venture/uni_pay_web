@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class UniInvoiceModel {
   late String id;
   late String status;
@@ -48,6 +50,6 @@ class UniInvoiceModel {
     updatedAt = json['updated_at'] ?? '';
     backUrl = json['back_url'] ?? '';
     successUrl = json['success_url'] ?? '';
-    metadata = json['metadata'] ?? {};
+    metadata = json['metadata'] != null ? jsonDecode(json['metadata']) : {};
   }
 }

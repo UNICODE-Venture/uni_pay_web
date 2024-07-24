@@ -12,21 +12,21 @@ class UniPayWeb {
 
   /// Create Invoice ---------------------
   ///
-  /// PSK: Publishable Secret Key
+  /// SK: Secret Key
   static Future<UniInvoiceModel> createInvoice({
     required UniInvoiceDTO dto,
-    required String psk,
+    required String sk,
   }) {
-    return _invoicesMethods.createInvoice(dto: dto, psk: psk);
+    return _invoicesMethods.createInvoice(dto: dto, sk: sk);
   }
 
   /// Get Payment ---------------------
   ///
-  /// PSK: Publishable Secret Key
+  /// SK: Secret Key
   static Future<PaymentsRes> getPayment({
     required String transactionId,
-    required String psk,
+    required String sk,
   }) {
-    return _paymentMethods.getPayment(transactionId: transactionId, psk: psk);
+    return _paymentMethods.getPayment(transactionId: transactionId, sk: sk);
   }
 }

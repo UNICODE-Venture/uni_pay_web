@@ -8,14 +8,14 @@ void main() {
   );
   final createInvoiceRes = UniPayWeb.createInvoice(
     dto: dto,
-    psk: 'YOUR-KEY',
+    sk: 'YOUR-KEY',
   );
   print('createInvoiceRes: $createInvoiceRes');
 
   /// 2- Get Payment Example -------------------------------
   final getPaymentRes = UniPayWeb.getPayment(
     transactionId: 'TRANSACTION-ID',
-    psk: 'YOUR-KEY',
+    sk: 'YOUR-KEY',
   );
   print('uniPayWeb: $getPaymentRes');
 }

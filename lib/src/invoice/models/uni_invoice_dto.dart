@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:uni_pay_web/src/core/enums.dart';
 
 class UniInvoiceDTO {
@@ -19,6 +20,9 @@ class UniInvoiceDTO {
   /// An endpoint on your site, that we will redirect to after the user clicks on the back button.
   String? backUrl;
 
+  /// An endpoint on your server, for receiving notifications about paid invoices..
+  String? callBackUrl;
+
   /// Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to metadata.
   Map<String, dynamic>? metadata;
 
@@ -29,6 +33,7 @@ class UniInvoiceDTO {
     this.expiredAt,
     this.successUrl,
     this.backUrl,
+    this.callBackUrl,
     this.metadata,
   });
 
@@ -40,7 +45,8 @@ class UniInvoiceDTO {
       if (expiredAt != null) 'expired_at': expiredAt,
       if (successUrl != null) 'success_url': successUrl,
       if (backUrl != null) 'back_url': backUrl,
-      if (metadata != null) 'metadata': metadata,
+      if (callBackUrl != null) 'callback_url': callBackUrl,
+      if (metadata != null) 'metadata': jsonEncode(metadata),
     };
   }
 }

@@ -9,9 +9,9 @@ class PaymentMethods {
   /// Get Payment ---------------------
   Future<PaymentsRes> getPayment({
     required String transactionId,
-    required String psk,
+    required String sk,
   }) async {
-    String basicAuth = 'Basic ${base64.encode(utf8.encode('$psk:'))}';
+    String basicAuth = 'Basic ${base64.encode(utf8.encode('$sk:'))}';
     final response = await httpFactory.get(
       Apis.payments,
       params: <String, String>{

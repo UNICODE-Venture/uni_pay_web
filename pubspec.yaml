@@ -1,6 +1,6 @@
 name: uni_pay_web
 description: A lightweight library for processing online payments and generating invoices with Moyasar, providing seamless payment info retrieval as well.
-version: 2.0.0
+version: 3.0.0
 repository: https://github.com/UNICODE-Venture/uni_pay_web
 homepage: https://github.com/UNICODE-Venture/uni_pay_web
 issue_tracker: https://github.com/UNICODE-Venture/uni_pay_web/issues
